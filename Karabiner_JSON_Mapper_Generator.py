@@ -78,12 +78,12 @@ def convert_text_to_karabiner(text, trigger_key="f17", delay=0):
 def main():
     parser = argparse.ArgumentParser(description="Convert text to karabiner Complex Modifications JSON Configuration")
     parser.add_argument("text", help="Text to convert karabiner Complex_Modifications")
-    parser.add_argument("trigger_key", help="Trigger key (example: f1~f20)")
+    parser.add_argument("-k","--key", help="Trigger key (example: f1~f20)")
     parser.add_argument("-d","--delay", help="Delay in milliseconds (default 0)", default=0, type=int)
     args = parser.parse_args()
 
     delay = args.delay if args.delay is not None else 0
-    json_result = convert_text_to_karabiner(args.text,args.trigger_key,delay)
+    json_result = convert_text_to_karabiner(args.text,args.key,delay)
     print(json.dumps(json_result, indent=2))
 
 if __name__ == "__main__":
