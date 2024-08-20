@@ -22,5 +22,5 @@ This script converts plain text into Karabiner-Elements JSON format, allowing us
 Run the script with the following command:
 
 ```bash
-$ python Karabiner_JSON_Mapper_Generator.py 'Your Text Here!' --key f20 --delay 150 > result.json
+$ python Karabiner_JSON_Mapper_Generator.py 'Your Text Here!' --key f20 --delay 150 > sample.json
 ```
